@@ -30,17 +30,17 @@ The dataset we used was derived from [DeepRockSR-3D](https://www.digitalrockspor
 There are 2400, 300, 300 HR 3D images (100x100x100) for training, testing and validation, respectively.
 
 #### Training
-1. Download the dataset and unpack them to any place you want. Then, change the ```dataroot``` and ```test_dataroot``` argument in ```./options/realSR_MASR.py``` to the place where images are located
-2. You can change the hyperparameters of different models by modifying the files in the ```./options/``` folder
+1. Download the dataset and unpack them to any place you want. Then, change the ```dir_data``` argument in ```./options.py``` or  ```demo.sh``` to the place where images are located
+2. You can change the hyperparameters of different models by modifying the files in the ```./options.py``` 
 3. Run ```main.py``` using script file ```demo.sh```
 ```bash
 bash demo.sh
 ```
-4. You can find the results in ```./experiments/EAST``` if the ```exp_name``` argument in ```./options``` is ```EAST```.
+4. You can find the results in ```./experiments/EAST``` if the ```save``` argument in ```./options``` is ```EAST```.
 
 #### Testing
 1. Download our pre-trained models to ```./models``` folder or use your pre-trained models
-2. Change the ```test_dataroot``` argument in ```CDC_test.py``` to the place where images are located
+2. Change the ```dir_data``` argument in ```./options.py``` or  ```demo.sh``` to the place where images are located
 3. Run ```main.py``` using script file ```demo.sh```
 ```bash
 bash demo.sh
